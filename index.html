@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14110F">
+  <meta name="description" content="A concept sample for Gusto's Cafe, Lounge & Bar in Hamirpur, created by Designer Hub.">
+  <title>Gusto's Cafe, Lounge & Bar — Concept Sample</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--charcoal:#14110F;--smoke:#221C18;--cream:#FBF1E4;--muted:#C9B9A8;--amber:#F2A413;--copper:#B5651D;--ember:#D9543B;--veg:#2E7D32;--line:rgba(181,101,29,.42);--radius:18px;--nav-h:82px;--max:1220px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px;background:var(--charcoal)}
+    body{margin:0;background:var(--charcoal);color:var(--cream);font-family:"Instrument Sans",sans-serif;line-height:1.6;overflow-x:hidden}
+    body.locked{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:4px}
+    img,svg{max-width:100%}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
+    .concept-bar{position:sticky;top:0;z-index:120;background:#2A2119;color:#FCE7C3;border-bottom:1px solid var(--line);font-size:.78rem;text-align:center;padding:7px 12px;letter-spacing:.015em}
+    .progress{height:3px;background:transparent;position:fixed;z-index:150;top:32px;left:0;right:0}
+    .progress span{display:block;height:100%;width:0;background:var(--amber);transition:width .12s linear}
+    .site-nav{position:sticky;top:32px;z-index:100;background:rgba(20,17,15,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(181,101,29,.25);transition:padding .5s ease}
+    .nav-inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px;transition:height .5s ease}
+    .site-nav.compact .nav-inner{height:62px}
+    .wordmark{font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem;font-weight:800;line-height:1.05;letter-spacing:-.04em}
+    .wordmark small{display:block;color:var(--amber);font:600 .63rem "Instrument Sans",sans-serif;letter-spacing:.14em;margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:25px;font-size:.9rem;color:#E4D6C7}
+    .nav-links a{padding:8px 0;border-bottom:2px solid transparent;transition:color .3s,border-color .3s}
+    .nav-links a:hover,.nav-links a.active{color:var(--amber);border-color:var(--amber)}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .menu-toggle{display:none;border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:50%;width:44px;height:44px;font-size:1.25rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 19px;border-radius:999px;border:1px solid transparent;font-weight:700;font-size:.92rem;transition:transform .5s ease,background .4s ease,border-color .4s ease,color .4s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--amber);color:#21160A}
+    .btn-primary:hover{background:#FFC34A}
+    .btn-outline{background:transparent;border-color:var(--line);color:var(--cream)}
+    .btn-outline:hover{border-color:var(--amber);background:rgba(242,164,19,.08)}
+    .btn-small{min-height:40px;padding:9px 14px;font-size:.85rem}
+    .eyebrow{display:flex;align-items:center;gap:10px;color:var(--amber);font-size:.77rem;font-weight:700;letter-spacing:.12em;text-transform:none}
+    .eyebrow:before{content:"";height:1px;width:25px;background:var(--copper)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.045em;line-height:1.05}
+    h1{font-size:clamp(3.1rem,8vw,7rem);max-width:900px;margin:22px 0}
+    h2{font-size:clamp(2.2rem,5vw,4.4rem);margin-bottom:18px}
+    h3{font-size:1.45rem;margin-bottom:12px}
+    .section{padding:112px 0;position:relative}
+    .section-head{max-width:760px;margin-bottom:42px}
+    .section-head p{color:var(--muted);max-width:620px;font-size:1.05rem}
+    .hero{min-height:min(850px,calc(100svh - 110px));display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line)}
+    .hero:before{content:"";position:absolute;inset:-20%;z-index:-2;background:radial-gradient(ellipse at var(--glow-x,65%) var(--glow-y,40%),rgba(242,164,19,.24),transparent 28%),radial-gradient(ellipse at 15% 80%,rgba(217,84,59,.12),transparent 34%);animation:breathe 9s ease-in-out infinite alternate}
+    .hero:after,.grain:after{content:"";pointer-events:none;position:absolute;inset:0;z-index:-1;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+    .hero-content{padding:90px 0 100px;position:relative;z-index:1}
+    .hero h1 span{display:block;opacity:0;transform:translateY(24px);animation:reveal .8s ease-out forwards}
+    .hero h1 span:nth-child(2){animation-delay:.22s}.hero h1 span:nth-child(3){animation-delay:.44s;color:var(--amber)}
+    .hero-copy{max-width:520px;color:#D7C7B6;font-size:1.1rem;margin-bottom:28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .status{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(242,164,19,.35);background:rgba(34,28,24,.72);border-radius:999px;padding:8px 13px;font-size:.83rem;margin-top:32px;color:#F8E8D4}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:#75B77B;box-shadow:0 0 0 4px rgba(117,183,123,.13)}
+    .hero-art{position:absolute;right:5%;bottom:8%;width:min(33vw,410px);aspect-ratio:1;opacity:.8;z-index:0}
+    .hero-art .ring{position:absolute;border:1px solid rgba(242,164,19,.34);border-radius:50%;inset:8%;animation:slowspin 45s linear infinite}
+    .hero-art .ring:nth-child(2){inset:20%;border-style:dashed;animation-direction:reverse}
+    .hero-art svg{position:absolute;inset:22%;width:56%;height:56%;color:var(--amber);filter:drop-shadow(0 0 30px rgba(242,164,19,.25))}
+    .scroll-cue{position:absolute;bottom:24px;left:0;color:var(--muted);font-size:.75rem;letter-spacing:.1em;text-transform:none}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .art-tile{min-height:380px;border:1px solid var(--line);border-radius:var(--radius);background:radial-gradient(circle at 50% 35%,rgba(242,164,19,.12),transparent 45%),linear-gradient(145deg,#282019,#171311);display:grid;place-items:center;position:relative;overflow:hidden}
+    .art-tile:before,.photo-placeholder:before{content:"";position:absolute;inset:12px;border:1px solid rgba(181,101,29,.35);border-radius:12px;pointer-events:none}
+    .art-tile svg{width:56%;color:var(--copper);opacity:.9}
+    .art-tile .tile-label{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:var(--muted);font-size:.74rem;letter-spacing:.08em}
+    .muted{color:var(--muted)}
+    .hairline{height:1px;background:linear-gradient(90deg,var(--copper),transparent);margin:26px 0}
+    .pill-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+    .pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:#E7D7C6;font-size:.83rem}
+    .menu-section{background:#191512}
+    .menu-tools{position:sticky;top:94px;z-index:40;background:rgba(25,21,18,.96);backdrop-filter:blur(16px);padding:14px 0 12px;border-block:1px solid rgba(181,101,29,.28);margin-bottom:25px}
+    .category-tabs{display:flex;gap:8px;overflow-x:auto;padding:3px 1px 10px;scrollbar-width:thin;scrollbar-color:var(--copper) transparent}
+    .category-tab,.filter-chip{white-space:nowrap;border:1px solid rgba(181,101,29,.35);border-radius:999px;padding:9px 14px;background:transparent;color:#E9DACA;font-size:.86rem}
+    .category-tab[aria-selected="true"],.filter-chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#21160A}
+    .menu-filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .search-wrap{position:relative;flex:1;min-width:190px}
+    .search-wrap input{width:100%;border:1px solid var(--line);border-radius:999px;background:#120F0D;color:var(--cream);padding:11px 16px 11px 42px}
+    .search-wrap span{position:absolute;left:15px;top:8px;color:var(--muted);font-size:1.1rem}
+    .filter-group{display:flex;gap:6px;flex-wrap:wrap}
+    .menu-meta{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:.85rem;margin:18px 0}
+    .menu-note{font-size:.82rem;color:#D8C5B0;border-left:2px solid var(--amber);padding-left:12px}
+    .menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .menu-item{border:1px solid rgba(181,101,29,.25);border-radius:var(--radius);background:#211B17;padding:19px;min-width:0;transition:border-color .4s,transform .4s}
+    .menu-item:hover{border-color:rgba(242,164,19,.65);transform:translateY(-2px)}
+    .item-top{display:flex;justify-content:space-between;gap:15px}
+    .item-name{font-weight:700;font-size:1.02rem}
+    .item-price{font-weight:700;color:var(--amber);white-space:nowrap}
+    .item-tags{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-top:12px;font-size:.75rem;color:var(--muted)}
+    .diet{display:inline-flex;align-items:center;gap:6px}
+    .diet-dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+    .diet-dot.veg{background:var(--veg)}.diet-dot.nonveg{background:var(--ember)}
+    .special{color:#FFD98A;border:1px solid rgba(242,164,19,.35);padding:2px 7px;border-radius:999px}
+    .item-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
+    .size-select{background:#15110F;border:1px solid var(--line);border-radius:9px;color:var(--cream);padding:7px 9px;max-width:145px}
+    .heart{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:999px;padding:7px 11px;font-size:.82rem}
+    .heart[aria-pressed="true"]{color:#FFD0C8;border-color:var(--ember);background:rgba(217,84,59,.12)}
+    .empty-state{padding:45px 20px;text-align:center;border:1px dashed var(--line);border-radius:var(--radius);color:var(--muted);grid-column:1/-1}
+    .full-menu-note{text-align:center;color:var(--muted);padding-top:28px}
+    .picker{background:linear-gradient(130deg,#211A15,#181310);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+    .picker-questions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    fieldset{border:0;padding:0;margin:0;min-width:0}
+    legend{font-weight:700;margin-bottom:12px}
+    .choice-row{display:flex;gap:7px;flex-wrap:wrap}
+    .choice{position:relative}
+    .choice input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+    .choice label{display:block;border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:#E6D5C2;font-size:.85rem;cursor:pointer}
+    .choice input:checked+label{background:var(--amber);color:#21160A;border-color:var(--amber)}
+    .choice input:focus-visible+label{outline:3px solid var(--amber);outline-offset:3px}
+    .picker-actions{display:flex;gap:12px;align-items:center;margin-top:25px;flex-wrap:wrap}
+    .text-link{color:var(--amber);text-decoration:underline;text-underline-offset:4px;background:none;border:0;padding:7px 0}
+    .suggestions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+    .suggestion{background:#211B17;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+    .suggestion p{font-size:.9rem;color:var(--muted);margin-bottom:14px}
+    .event-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+    .event-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#251D17,#191411);padding:23px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+    .event-symbol{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--amber);font-size:1.2rem;margin-bottom:24px}
+    .event-card p{font-size:.88rem;color:var(--muted)}
+    .music-strip{padding:38px 0;background:#251C15;border-block:1px solid var(--line)}
+    .music-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .music-inner h2{font-size:clamp(1.8rem,3vw,3rem);margin:0}
+    .music-inner p{margin:7px 0 0;color:var(--muted)}
+    .music-mark{font-size:2.6rem;color:var(--amber);letter-spacing:.12em}
+    .stay-strip{background:#1A1512;padding:46px 0}
+    .stay-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px;background:radial-gradient(circle at 80% 0,rgba(242,164,19,.11),transparent 35%),#211A15}
+    .stay-inner h3{margin-bottom:7px}.stay-price{font-family:"Bricolage Grotesque";font-size:1.5rem;color:var(--amber);white-space:nowrap}
+    .gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:220px 220px;gap:13px}
+    .photo-placeholder{position:relative;border:1px solid var(--line);border-radius:var(--radius);background:#171310;display:block;min-width:0;min-height:0;overflow:hidden;color:var(--muted);cursor:pointer;padding:0;text-align:left}
+    .photo-placeholder img{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .45s}
+    .photo-placeholder:hover img{transform:scale(1.045);filter:saturate(1.08)}
+    .photo-placeholder span{position:absolute;left:0;right:0;bottom:0;padding:32px 16px 14px;font-size:.82rem;letter-spacing:0;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.82));z-index:1}
+    .photo-placeholder:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+    .photo-placeholder:first-child{grid-row:span 2}
+    .photo-placeholder svg{display:none}
+    .photo-placeholder:after{content:"";position:absolute;inset:0;background:rgba(242,164,19,0);transition:background .4s}
+    .photo-placeholder:hover:after{background:rgba(242,164,19,.07)}
+    .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+    .visit-card{background:#211A16;border:1px solid var(--line);border-radius:var(--radius);padding:27px}
+    .hours-table{width:100%;border-collapse:collapse;font-size:.92rem}
+    .hours-table td{padding:10px 8px;border-bottom:1px solid rgba(181,101,29,.18)}
+    .hours-table td:last-child{text-align:right;color:#E6D5C2}
+    .hours-table tr.today td{color:var(--amber);font-weight:700;background:rgba(242,164,19,.07)}
+    .visit-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+    .contact-line{padding:12px 0;border-bottom:1px solid rgba(181,101,29,.2);color:#E5D5C5}
+    .contact-line strong{display:block;color:var(--cream);font-size:.83rem;margin-bottom:3px}
+    .delivery-note{font-size:.83rem;color:var(--muted);margin-top:18px}
+    footer{padding:45px 0 30px;border-top:1px solid var(--line);background:#100E0C}
+    .footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+    .footer-copy{max-width:650px;color:var(--muted);font-size:.82rem}
+    .legal-note{color:#D8BFA7;margin-top:12px}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid rgba(181,101,29,.2);margin-top:28px;padding-top:18px;color:#AFA091;font-size:.78rem}
+    .floating-call{position:fixed;right:20px;bottom:20px;z-index:80;box-shadow:0 8px 35px rgba(0,0,0,.35)}
+    .drawer-backdrop,.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.68);z-index:200;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+    .drawer-backdrop.open,.modal-backdrop.open{opacity:1;visibility:visible}
+    .drawer{position:fixed;z-index:201;top:0;right:0;height:100dvh;width:min(460px,100%);background:#1B1612;border-left:1px solid var(--line);padding:26px;display:flex;flex-direction:column;transform:translateX(102%);transition:transform .55s ease-out}
+    .drawer.open{transform:translateX(0)}
+    .drawer-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px}
+    .icon-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--cream);font-size:1.2rem}
+    .drawer-list{overflow:auto;flex:1;padding:15px 0}
+    .short-item{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(181,101,29,.2)}
+    .short-item small{display:block;color:var(--muted)}
+    .remove-item{background:none;border:0;color:#F39B8A;text-decoration:underline}
+    .drawer-foot{border-top:1px solid var(--line);padding-top:17px}
+    .drawer-foot p{font-size:.82rem;color:var(--muted)}
+    dialog{width:min(620px,calc(100% - 28px));max-height:90dvh;overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:#1D1713;color:var(--cream);padding:0;box-shadow:0 30px 100px #000}
+    dialog::backdrop{background:rgba(0,0,0,.75);backdrop-filter:blur(4px)}
+    .modal-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+    .modal-head h2{font-size:2rem;margin:0}
+    .modal-body{padding:25px 26px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{display:flex;flex-direction:column;gap:6px;min-width:0}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:.85rem;color:#E8D8C6;font-weight:600}
+    .field input,.field select,.field textarea{width:100%;min-width:0;border:1px solid rgba(181,101,29,.55);border-radius:10px;background:#120F0D;color:var(--cream);padding:11px 12px}
+    .field textarea{min-height:88px;resize:vertical}
+    .field-error{font-size:.78rem;color:#FF9F91;min-height:1em}
+    .form-note{font-size:.8rem;color:var(--muted);margin:16px 0}
+    .form-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .lightbox{position:fixed;inset:0;z-index:250;background:rgba(8,7,6,.96);display:none;align-items:center;justify-content:center;padding:28px}
+    .lightbox.open{display:flex}
+    .lightbox-inner{width:min(900px,100%);height:min(76vh,680px);display:grid;place-items:center;position:relative}
+    .lightbox .photo-placeholder{width:100%;height:100%;max-height:680px;cursor:default}
+    .lightbox-controls{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+    .lightbox-controls button,.lightbox-close{pointer-events:auto;background:#211A15;border:1px solid var(--line);color:var(--cream);border-radius:50%;width:46px;height:46px;font-size:1.3rem}
+    .lightbox-close{position:absolute;right:0;top:-58px}
+    .lightbox-caption{position:absolute;bottom:-34px;left:0;color:var(--muted);font-size:.85rem}
+    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .mobile-menu{display:none}
+    @keyframes breathe{0%{transform:scale(1);opacity:.75}100%{transform:scale(1.08);opacity:1}}
+    @keyframes reveal{to{opacity:1;transform:translateY(0)}}
+    @keyframes slowspin{to{transform:rotate(360deg)}}
+    @media(max-width:1000px){.nav-links{gap:14px}.nav-links a{font-size:.82rem}.nav-actions .btn{display:none}.hero-art{right:-4%;opacity:.45}.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding:85px 0}}
+    @media(max-width:760px){
+      :root{--nav-h:68px}.wrap{width:min(var(--max),calc(100% - 32px))}.progress{top:32px}
+      .nav-links{display:none}.nav-actions .btn{display:none}.menu-toggle{display:block}
+      .mobile-menu{position:fixed;inset:0;z-index:110;background:#14110F;display:flex;flex-direction:column;padding:26px 24px;transform:translateY(-105%);transition:transform .55s ease-out;visibility:hidden}
+      .mobile-menu.open{transform:translateY(0);visibility:visible}.mobile-menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}.mobile-menu nav{display:flex;flex-direction:column;gap:7px}.mobile-menu nav a{font:700 clamp(2rem,8vw,3.5rem) "Bricolage Grotesque";letter-spacing:-.04em;border-bottom:1px solid var(--line);padding:11px 0}
+      .hero{min-height:740px;min-height:calc(90svh - 70px)}.hero-content{padding:75px 0 90px}.hero-art{width:65vw;right:-17%;bottom:4%;opacity:.25}h1{font-size:clamp(3rem,13vw,5.5rem)}
+      .split,.visit-grid{grid-template-columns:1fr;gap:30px}.split .art-tile{min-height:290px}.section{padding:74px 0}
+      .menu-tools{top:96px}.menu-filters{align-items:stretch}.search-wrap{flex-basis:100%}.filter-group{flex:1}.filter-chip{flex:1}.menu-grid{grid-template-columns:1fr}
+      .picker-questions{grid-template-columns:1fr;gap:20px}.suggestions{grid-template-columns:1fr}.event-grid{grid-template-columns:1fr 1fr}.event-card{padding:18px;min-height:205px}
+      .music-inner{align-items:flex-start}.music-mark{display:none}.stay-inner{align-items:flex-start;flex-direction:column;padding:23px}
+      .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 170px 170px}.photo-placeholder:first-child{grid-row:span 1;grid-column:span 2}
+      .footer-top,.footer-bottom{flex-direction:column;align-items:flex-start}.floating-call{right:13px;bottom:13px}
+    }
+    @media(max-width:420px){.wrap{width:calc(100% - 26px)}.concept-bar{font-size:.69rem}.hero-actions .btn{width:100%}.event-grid{grid-template-columns:1fr}.event-card{min-height:180px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.modal-head,.modal-body{padding:20px}.picker{padding:20px}.gallery-grid{grid-template-rows:180px 145px 145px}.menu-meta{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="concept-bar">Concept sample by Designer Hub. Not the official website of Gusto's.</div>
+  <div class="progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <header class="site-nav" id="siteNav">
+    <div class="wrap nav-inner">
+      <a class="wordmark" href="#home" aria-label="Gusto's home">Gusto's<small>Cafe · Lounge · Bar</small></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">The space</a><a href="#menu">Menu</a><a href="#events">Events</a><a href="#moments">Moments</a><a href="#visit">Visit</a>
+      </nav>
+      <div class="nav-actions"><button class="btn btn-primary btn-small" data-open-reservation>Enquire about a table</button><button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">☰</button></div>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top"><a class="wordmark" href="#home">Gusto's<small>Cafe · Lounge · Bar</small></a><button class="icon-btn" id="mobileMenuClose" aria-label="Close navigation menu">×</button></div>
+    <nav aria-label="Mobile navigation"><a href="#about">The space</a><a href="#menu">Menu</a><a href="#events">Events</a><a href="#moments">Moments</a><a href="#visit">Visit</a></nav>
+    <p class="muted" style="margin-top:auto">Hamirpur, Himachal Pradesh</p>
+  </div>
+
+  <main>
+    <section class="hero grain" id="home" aria-labelledby="heroTitle">
+      <div class="wrap hero-content">
+        <div class="eyebrow">A place to gather in Hamirpur</div>
+        <h1 id="heroTitle"><span>Good food.</span><span>Good music.</span><span>Good nights.</span></h1>
+        <p class="hero-copy">Meet over a meal, stay for the music, and make room for the moments that bring everyone together.</p>
+        <div class="hero-actions"><button class="btn btn-primary" data-open-reservation>Reserve a table</button><a class="btn btn-outline" href="#menu">Browse the menu</a></div>
+        <div class="status" role="status" aria-live="polite"><span class="status-dot" id="statusDot"></span><span id="openStatus">Checking today's hours…</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="ring"></div><div class="ring"></div><svg viewBox="0 0 160 160" fill="none"><circle cx="80" cy="80" r="48" stroke="currentColor" stroke-width="1.2"/><path d="M80 32v96M32 80h96M46 46l68 68M114 46l-68 68" stroke="currentColor" stroke-width="1.2"/><path d="M80 54c-13 0-22 10-22 22 0 18 22 36 22 36s22-18 22-36c0-12-9-22-22-22Z" stroke="currentColor" stroke-width="1.5"/><circle cx="80" cy="76" r="7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="wrap scroll-cue">Scroll to explore</div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">The space</div>
+          <h2>Come for the food.<br>Make a night of it.</h2>
+          <p class="muted">Gusto's Cafe, Lounge & Bar is located at Chopra Residency, near Degree College in Anu, Hamirpur. The concept here is simple: good food, live music, and space to gather with your people.</p>
+          <div class="hairline"></div>
+          <p>Planning a birthday, a family milestone, or a get-together with colleagues? Start an enquiry and the venue can help you discuss the details.</p>
+          <div class="pill-row"><span class="pill">Live music and dancing</span><span class="pill">Food at the bar</span><span class="pill">Group occasions</span></div>
+        </div>
+        <div class="art-tile" aria-label="Illustrative placeholder for a cafe interior photo">
+          <svg viewBox="0 0 240 240" fill="none" aria-hidden="true"><path d="M38 196h164M56 196V72h128v124M72 72V49h96v23M77 91h86v54H77zM90 105h60M90 119h60M90 133h36" stroke="currentColor" stroke-width="2"/><path d="M92 49c0-14 12-25 28-25s28 11 28 25" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="170" r="12" stroke="currentColor" stroke-width="2"/><path d="M120 158v24M108 170h24" stroke="currentColor" stroke-width="2"/></svg>
+          <span class="tile-label">[ADD PHOTO FROM CAFE]</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Explore the menu</div><h2>Find your kind of comfort.</h2><p>Browse a selection of dishes from the menu shared for this concept. Use the filters to narrow it down, then shortlist favourites for an enquiry.</p></div>
+      </div>
+      <div class="menu-tools">
+        <div class="wrap">
+          <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Menu categories"></div>
+          <div class="menu-filters">
+            <label class="search-wrap"><span aria-hidden="true">⌕</span><span class="sr-only">Search menu</span><input id="menuSearch" type="search" placeholder="Search dishes…" autocomplete="off"></label>
+            <div class="filter-group" role="group" aria-label="Dietary filter"><button class="filter-chip" data-diet="all" aria-pressed="true">All</button><button class="filter-chip" data-diet="veg" aria-pressed="false">Veg</button><button class="filter-chip" data-diet="nonveg" aria-pressed="false">Non-veg</button></div>
+            <button class="filter-chip" id="specialFilter" aria-pressed="false">Chef's specials</button>
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="menu-meta"><span id="menuCount" aria-live="polite">Loading menu…</span><span class="menu-note">Prices as per the venue's menu. To be confirmed before launch.</span></div>
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+        <p class="full-menu-note">The full menu has many more dishes: <strong>[ADD REST OF MENU]</strong></p>
+      </div>
+    </section>
+
+    <section class="section" id="order-picker">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">A little help deciding</div><h2>What should I order?</h2><p>Answer three quick questions for a few menu ideas. Suggestions are based on the menu details available for this sample.</p></div>
+        <div class="picker">
+          <form id="pickerForm">
+            <div class="picker-questions">
+              <fieldset><legend>1. What do you eat?</legend><div class="choice-row"><span class="choice"><input type="radio" id="pickVeg" name="diet" value="veg" checked><label for="pickVeg">Veg</label></span><span class="choice"><input type="radio" id="pickNonveg" name="diet" value="nonveg"><label for="pickNonveg">Non-veg</label></span></div></fieldset>
+              <fieldset><legend>2. What sounds right?</legend><div class="choice-row"><span class="choice"><input type="radio" id="pickLight" name="mood" value="light" checked><label for="pickLight">Light</label></span><span class="choice"><input type="radio" id="pickHearty" name="mood" value="hearty"><label for="pickHearty">Hearty</label></span><span class="choice"><input type="radio" id="pickShare" name="mood" value="share"><label for="pickShare">To share</label></span></div></fieldset>
+              <fieldset><legend>3. Flavour mood?</legend><div class="choice-row"><span class="choice"><input type="radio" id="pickMild" name="heat" value="mild" checked><label for="pickMild">Mild</label></span><span class="choice"><input type="radio" id="pickSpicy" name="heat" value="spicy"><label for="pickSpicy">Spicy</label></span></div></fieldset>
+            </div>
+            <div class="picker-actions"><button class="btn btn-primary" type="submit">Suggest dishes</button><button class="text-link" type="reset" id="pickerReset">Start again</button></div>
+          </form>
+          <div class="suggestions" id="suggestions" aria-live="polite" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Gather together</div><h2>Make it your occasion.</h2><p>Share the basics and prepare an event enquiry. Dates, availability, arrangements and any package details must be confirmed directly with the venue.</p></div>
+        <div class="event-grid">
+          <article class="event-card"><div><div class="event-symbol" aria-hidden="true">✳</div><h3>Engagement</h3><p>A gathering for a meaningful milestone.</p></div><button class="btn btn-outline btn-small event-enquire" data-event="Engagement">Enquire about this event</button></article>
+          <article class="event-card"><div><div class="event-symbol" aria-hidden="true">♡</div><h3>Anniversary</h3><p>Bring your favourite people together.</p></div><button class="btn btn-outline btn-small event-enquire" data-event="Anniversary">Enquire about this event</button></article>
+          <article class="event-card"><div><div class="event-symbol" aria-hidden="true">✦</div><h3>Birthday</h3><p>Plan a birthday get-together.</p></div><button class="btn btn-outline btn-small event-enquire" data-event="Birthday">Enquire about this event</button></article>
+          <article class="event-card"><div><div class="event-symbol" aria-hidden="true">◌</div><h3>Corporate or farewell</h3><p>Discuss a group occasion with the venue.</p></div><button class="btn btn-outline btn-small event-enquire" data-event="Corporate party / Farewell">Enquire about this event</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="music-strip" aria-label="Live music information"><div class="wrap music-inner"><div><div class="eyebrow">The night has a soundtrack</div><h2>Live music and dancing</h2><p>Event days and timings: <strong>[ADD EVENT DAYS FROM CAFE]</strong></p></div><div class="music-mark" aria-hidden="true">♫ ♪ ♫</div></div></section>
+    <section class="stay-strip"><div class="wrap stay-inner"><div><div class="eyebrow">Stay a little longer</div><h3>Stay at Chopra Residency</h3><p class="muted" style="margin:0">Room details and availability: [CONFIRM WITH CAFE]</p></div><div><div class="stay-price">From ₹1,999</div><span class="muted" style="font-size:.8rem">[CONFIRM WITH CAFE]</span></div></div></section>
+
+    <section class="section" id="moments">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Moments at Gusto's</div><h2>A closer look at Gusto's.</h2><p>Photos of the lounge, food and venue. Select any photo to view it larger.</p></div>
+        <div class="gallery-grid" id="galleryGrid">
+          <button class="photo-placeholder" data-gallery="0" aria-label="View illuminated bar and lounge seating">
+            <img src="./assets/interior-wide.webp" alt="Illuminated bar and lounge seating" loading="lazy" decoding="async"><span>Inside the lounge</span>
+          </button>
+          <button class="photo-placeholder" data-gallery="1" aria-label="View grilled food served with chutney and salad">
+            <img src="./assets/food-grilled.webp" alt="Grilled food served with chutney and salad" loading="lazy" decoding="async"><span>From the kitchen</span>
+          </button>
+          <button class="photo-placeholder" data-gallery="2" aria-label="View Gusto's Cafe Lounge Bar entrance">
+            <img src="./assets/entrance.webp" alt="Gusto's Cafe Lounge Bar entrance" loading="lazy" decoding="async"><span>Find the entrance</span>
+          </button>
+          <button class="photo-placeholder" data-gallery="3" aria-label="View Chopra Residency building exterior in Hamirpur">
+            <img src="./assets/exterior.webp" alt="Chopra Residency building exterior in Hamirpur" loading="lazy" decoding="async"><span>At Chopra Residency</span>
+          </button>
+          <button class="photo-placeholder" data-gallery="4" aria-label="View dining tables and lounge seating under blue accent lights">
+            <img src="./assets/dining-room.webp" alt="Dining tables and lounge seating under blue accent lights" loading="lazy" decoding="async"><span>Settle in</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="visit">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Find your way</div><h2>See you in Hamirpur.</h2><p>Check the listed hours, confirm details directly with the venue, and plan your visit.</p></div>
+        <div class="visit-grid">
+          <div class="visit-card"><h3>Opening hours</h3><table class="hours-table"><tbody id="hoursTable"></tbody></table><div class="visit-actions"><button class="btn btn-outline btn-small" id="copyAddress">Copy address</button><a class="btn btn-primary btn-small" id="directionsLink" target="_blank" rel="noopener noreferrer">Get directions</a></div><p id="copyStatus" class="muted" role="status" aria-live="polite" style="font-size:.8rem;margin:10px 0 0"></p></div>
+          <div class="visit-card"><h3>Contact the venue</h3><div class="contact-line"><strong>Address</strong><span id="addressText">[ADD ADDRESS]</span></div><div class="contact-line"><strong>Phone</strong><a id="phoneLink" href="tel:+919317903054">+91 93179 03054</a></div><div class="contact-line"><strong>Instagram</strong><a id="instagramLink" href="https://www.instagram.com/gustos_hamirpur/" target="_blank" rel="noopener noreferrer">Visit Instagram</a></div><p class="delivery-note" id="deliveryText">Delivery details: [CONFIRM WITH CAFE]</p><div class="visit-actions"><a class="btn btn-primary btn-small" id="callNow" href="tel:+919317903054">Call now</a><a class="btn btn-outline btn-small" id="instagramButton" href="https://www.instagram.com/gustos_hamirpur/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">
+    <div class="footer-top"><a class="wordmark" href="#home">Gusto's<small>Cafe · Lounge · Bar</small></a><div class="footer-copy"><strong style="color:var(--cream)">Concept sample by Designer Hub.</strong> This is not the official website of Gusto's and is a design demonstration only. Venue details, menu prices, services and availability must be verified by the venue before publishing.<p class="legal-note">[ADD LEGAL AGE NOTICE AS REQUIRED BY LAW AND CONFIRM WITH THE VENUE]</p></div></div>
+    <div class="footer-bottom"><span>© <span id="yearNow"></span> Designer Hub · Concept preview</span><button class="text-link" id="backToTop">Back to top</button></div>
+  </div></footer>
+  <a class="btn btn-primary floating-call" id="floatingCall" href="tel:+919317903054" aria-label="Call Gusto's Cafe">Call</a>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="shortlistDrawer" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer-head"><div><div class="eyebrow">Your shortlist</div><h2 id="drawerTitle" style="font-size:1.8rem;margin:7px 0 0">Dishes to ask about</h2></div><button class="icon-btn" id="closeDrawer" aria-label="Close shortlist">×</button></div>
+    <div class="drawer-list" id="shortlistItems" aria-live="polite"></div>
+    <div class="drawer-foot"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><strong><span id="shortlistCount">0</span> dishes</strong><button class="text-link" id="clearShortlist">Clear list</button></div><p>This prepares an enquiry only. It is not a food order, booking, or payment.</p><button class="btn btn-primary" id="sendShortlist" style="width:100%">Send this list on WhatsApp</button></div>
+  </aside>
+
+  <dialog id="reservationDialog" aria-labelledby="reservationTitle">
+    <div class="modal-head"><div><div class="eyebrow">Table enquiry</div><h2 id="reservationTitle">Plan your visit.</h2></div><button class="icon-btn" data-close-dialog="reservationDialog" aria-label="Close reservation enquiry">×</button></div>
+    <div class="modal-body"><form id="reservationForm" novalidate>
+      <div class="form-grid">
+        <div class="field"><label for="resName">Your name *</label><input id="resName" name="name" autocomplete="name" required><span class="field-error" id="errResName"></span></div>
+        <div class="field"><label for="resPhone">Phone number *</label><input id="resPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span class="field-error" id="errResPhone"></span></div>
+        <div class="field"><label for="resDate">Preferred date *</label><input id="resDate" name="date" type="date" required><span class="field-error" id="errResDate"></span></div>
+        <div class="field"><label for="resTime">Preferred time *</label><select id="resTime" name="time" required><option value="">Choose a time</option></select><span class="field-error" id="errResTime"></span></div>
+        <div class="field"><label for="resParty">Party size *</label><select id="resParty" name="party" required><option value="">Choose people</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11–15</option><option>16+</option></select><span class="field-error" id="errResParty"></span></div>
+        <div class="field full"><label for="resNote">Note (optional)</label><textarea id="resNote" name="note" placeholder="Any details you'd like the venue to know"></textarea></div>
+      </div>
+      <p class="form-note">This sends a table enquiry to WhatsApp only. Your table is not reserved until the venue confirms directly. No payment is taken here.</p>
+      <div class="form-actions"><button class="btn btn-primary" type="submit">Prepare WhatsApp enquiry</button><button class="btn btn-outline" type="button" data-close-dialog="reservationDialog">Cancel</button></div>
+    </form></div>
+  </dialog>
+
+  <dialog id="eventDialog" aria-labelledby="eventTitle">
+    <div class="modal-head"><div><div class="eyebrow">Event enquiry</div><h2 id="eventTitle">Tell us the basics.</h2></div><button class="icon-btn" data-close-dialog="eventDialog" aria-label="Close event enquiry">×</button></div>
+    <div class="modal-body"><form id="eventForm" novalidate>
+      <div class="form-grid">
+        <div class="field"><label for="eventType">Event type *</label><select id="eventType" required><option value="">Choose an event</option><option>Engagement</option><option>Anniversary</option><option>Birthday</option><option>Corporate party / Farewell</option><option>Marriage</option><option>Other</option></select><span class="field-error" id="errEventType"></span></div>
+        <div class="field"><label for="eventDate">Preferred date *</label><input id="eventDate" type="date" required><span class="field-error" id="errEventDate"></span></div>
+        <div class="field"><label for="eventGuests">Expected guests *</label><input id="eventGuests" type="number" min="1" max="1000" inputmode="numeric" required><span class="field-error" id="errEventGuests"></span></div>
+        <div class="field full"><label for="eventNote">Note (optional)</label><textarea id="eventNote" placeholder="Share any initial requirements"></textarea></div>
+      </div>
+      <p class="form-note">This prepares an enquiry only. Event date, availability, arrangements and pricing must be confirmed with the venue.</p>
+      <div class="form-actions"><button class="btn btn-primary" type="submit">Prepare WhatsApp enquiry</button><button class="btn btn-outline" type="button" data-close-dialog="eventDialog">Cancel</button></div>
+    </form></div>
+  </dialog>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo placeholder preview" aria-hidden="true">
+    <div class="lightbox-inner" id="lightboxInner"><button class="lightbox-close" id="lightboxClose" aria-label="Close gallery preview">×</button><div id="lightboxContent"></div><div class="lightbox-controls"><button id="galleryPrev" aria-label="Previous photo">‹</button><button id="galleryNext" aria-label="Next photo">›</button></div><div class="lightbox-caption" id="lightboxCaption"></div></div>
+  </div>
+
+  <script>
+    // EDIT: Update this single configuration object only with venue-approved details.
+    const CONFIG = {
+      name: "Gusto's Cafe, Lounge & Bar", // EDIT: Venue display name.
+      tagline: "Good food. Good music. Good nights.", // EDIT: Short brand line.
+      address: "Ward No-1, near Degree College, Anu, Hamirpur, Himachal Pradesh 177005", // EDIT: Confirm the complete address.
+      phone: "+919317903054", // EDIT: Confirm the venue's public phone number.
+      whatsappNumber: "919816567915", // EDIT: Testing number. Switch to the venue's own WhatsApp number only after they approve it.
+      instagramUrl: "https://www.instagram.com/gustos_hamirpur/", // EDIT: Confirm the venue's official Instagram URL.
+      hours: { open: "11:30", close: "23:00", displayOpen: "11:30 am", displayClose: "11:00 pm" }, // EDIT: Confirm opening hours and timezone.
+      mapsQuery: "Gusto's Cafe Lounge & Bar, Chopra Residency, Ward No-1, near Degree College, Anu, Hamirpur, Himachal Pradesh 177005", // EDIT: Confirm the Maps search query.
+      deliveryNote: "Free delivery on food orders above ₹299 — [CONFIRM WITH CAFE]" // EDIT: Confirm delivery threshold, area and terms before launch.
+    };
+
+    // Menu prices and dish names are supplied for this concept. Confirm all details before publishing.
+    const MENU = [
+      {cat:"Asian Starters",name:"Veg Momos Steamed/Fried",price:179,diet:"veg"},
+      {cat:"Asian Starters",name:"Veg Kurkure Momos",price:219,diet:"veg",special:true},
+      {cat:"Asian Starters",name:"Honey Chilli Potato",price:219,diet:"veg"},
+      {cat:"Asian Starters",name:"Crackling Spinach Corn",price:259,diet:"veg",special:true},
+      {cat:"Asian Starters",name:"Paneer Tai Chi",price:339,diet:"veg",special:true},
+      {cat:"Asian Starters",name:"Kung Pao Cottage Cheese",price:339,diet:"veg"},
+      {cat:"Asian Starters",name:"Chicken Momos",price:219,diet:"nonveg"},
+      {cat:"Asian Starters",name:"Chicken Kurkure Momos",price:249,diet:"nonveg",special:true},
+      {cat:"Asian Starters",name:"Chicken Tai Chi",price:369,diet:"nonveg",special:true},
+      {cat:"Asian Starters",name:"Fish Chilli",price:499,diet:"nonveg"},
+      {cat:"Tandoori Starters",name:"Soya Chaap Tikka",price:269,diet:"veg"},
+      {cat:"Tandoori Starters",name:"Gusto's Special Lemon Soya Chaap",price:299,diet:"veg",special:true},
+      {cat:"Tandoori Starters",name:"Paneer Tikka",price:349,diet:"veg"},
+      {cat:"Tandoori Starters",name:"Tandoori Pineapple",price:349,diet:"veg",special:true},
+      {cat:"Tandoori Starters",name:"Afghani Broccoli",price:379,diet:"veg",special:true},
+      {cat:"Tandoori Starters",name:"Tandoori Veg Platter",price:599,diet:"veg"},
+      {cat:"Tandoori Starters",name:"Classic Chicken Tikka",price:419,diet:"nonveg"},
+      {cat:"Tandoori Starters",name:"Chicken Angara Kebab",price:429,diet:"nonveg",special:true},
+      {cat:"Tandoori Starters",name:"Fish Tikka",price:499,diet:"nonveg",special:true},
+      {cat:"Tandoori Starters",name:"Tandoori Non-Veg Platter",price:799,diet:"nonveg"},
+      {cat:"Quick Bites",name:"French Fries",price:179,diet:"veg"},
+      {cat:"Quick Bites",name:"Peanut Masala",price:179,diet:"veg"},
+      {cat:"Quick Bites",name:"Corn Chaat",price:179,diet:"veg",special:true},
+      {cat:"Quick Bites",name:"Aloo Chana Chaat",price:179,diet:"veg"},
+      {cat:"Quick Bites",name:"Tandoori Chicken Chat",price:249,diet:"nonveg",special:true},
+      {cat:"Pizza",name:"Classic Margherita",diet:"veg",sizes:{Reg:179,Mid:289,Large:399}},
+      {cat:"Pizza",name:"Farm House",diet:"veg",special:true,sizes:{Reg:269,Mid:379,Large:539}},
+      {cat:"Pizza",name:"Chicken Tikka Pizza",diet:"nonveg",sizes:{Reg:319,Mid:429,Large:619}},
+      {cat:"Pizza",name:"Peri Peri Chicken Pizza",diet:"nonveg",special:true,sizes:{Reg:349,Mid:459,Large:679}},
+      {cat:"Pasta",name:"Penne Alfredo",diet:"both",special:true,sizes:{Veg:269,Chicken:299}},
+      {cat:"Pasta",name:"Penne Infused Makhani",diet:"both",special:true,sizes:{Veg:269,Chicken:299}},
+      {cat:"Pasta",name:"Spaghetti Pomodoro",diet:"both",sizes:{Veg:289,Chicken:319}},
+      {cat:"Continental Appetizers",name:"Bruschetta Veg",price:219,diet:"veg"},
+      {cat:"Continental Appetizers",name:"Cheesy Garlic Bread",price:249,diet:"veg"},
+      {cat:"Continental Appetizers",name:"Spinach Cigar Roll",price:249,diet:"veg",special:true},
+      {cat:"Continental Appetizers",name:"Mushroom Duplex",price:249,diet:"veg",special:true},
+      {cat:"Continental Appetizers",name:"Kentucky Fried Chicken",price:399,diet:"nonveg",special:true},
+      {cat:"Continental Appetizers",name:"Fish n Chips",price:499,diet:"nonveg"},
+      {cat:"Soups",name:"Minestrone",price:129,diet:"veg",special:true},
+      {cat:"Soups",name:"Cream of Mushroom",price:149,diet:"veg",special:true},
+      {cat:"Soups",name:"Manchow",diet:"both",sizes:{Veg:119,Chicken:149}},
+      {cat:"Indian Main Course",name:"Chana Pindi",price:229,diet:"veg",special:true},
+      {cat:"Indian Main Course",name:"Dal Makhani",price:249,diet:"veg",special:true},
+      {cat:"Indian Main Course",name:"Palak Corn",price:279,diet:"veg",special:true},
+      {cat:"Indian Main Course",name:"Paneer Lababdar",price:319,diet:"veg",special:true},
+      {cat:"Indian Main Course",name:"Shahi Paneer",price:349,diet:"veg",special:true},
+      {cat:"Indian Main Course",name:"Chicken Rara",price:419,diet:"nonveg",special:true},
+      {cat:"Indian Main Course",name:"Butter Chicken Boneless",price:449,diet:"nonveg",special:true},
+      {cat:"Indian Main Course",name:"Rajasthani Laal Maas",price:549,diet:"nonveg",special:true},
+      {cat:"Indian Main Course",name:"Mutton Rogan Josh",price:549,diet:"nonveg"},
+      {cat:"Rice and Biryani",name:"Jeera Rice",price:139,diet:"veg"},
+      {cat:"Rice and Biryani",name:"Veg Biryani",price:249,diet:"veg",special:true},
+      {cat:"Rice and Biryani",name:"Chicken Biryani",price:299,diet:"nonveg"},
+      {cat:"Rice and Biryani",name:"Gosht Biryani",price:399,diet:"nonveg",special:true},
+      {cat:"Desserts",name:"Hot Gulab Jamun 2 pcs",price:79,diet:"veg"},
+      {cat:"Desserts",name:"Ice Cream single scoop",price:79,diet:"veg"},
+      {cat:"Desserts",name:"Walnut Brownie",price:99,diet:"veg"},
+      {cat:"Desserts",name:"Walnut Brownie with Vanilla Ice Cream",price:149,diet:"veg",special:true}
+    ];
+
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => [...root.querySelectorAll(sel)];
+    const money = n => `₹${n}`;
+    const categories = ["All dishes", ...new Set(MENU.map(x=>x.cat))];
+    let activeCategory = "All dishes", activeDiet = "all", onlySpecial = false;
+    let shortlist = new Map();
+    let lastFocus = null, activeGalleryIndex = 0, touchStartX = null;
+    const waBase = () => `https://wa.me/${CONFIG.whatsappNumber.replace(/\D/g,"")}`;
+
+    function makeWhatsApp(message){
+      window.open(`${waBase()}?text=${encodeURIComponent(message)}`,"_blank","noopener,noreferrer");
+    }
+    function priceLabel(item, selectedSize){
+      if(item.sizes){const key=selectedSize || Object.keys(item.sizes)[0];return {label:money(item.sizes[key]),key};}
+      return {label:money(item.price),key:""};
+    }
+    function itemDietLabel(diet){
+      if(diet==="veg")return '<span class="diet"><span class="diet-dot veg"></span>Veg</span>';
+      if(diet==="nonveg")return '<span class="diet"><span class="diet-dot nonveg"></span>Non-veg</span>';
+      return '<span class="diet">Veg / Non-veg options</span>';
+    }
+    function renderCategories(){
+      const holder=$("#categoryTabs");
+      holder.innerHTML=categories.map(cat=>`<button class="category-tab" role="tab" aria-selected="${cat===activeCategory}" data-category="${escapeHtml(cat)}">${escapeHtml(cat)}</button>`).join("");
+    }
+    function escapeHtml(str){return String(str).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+    function itemKey(item,size){return `${item.name}::${size||""}`;}
+    function renderMenu(){
+      const query=$("#menuSearch").value.trim().toLowerCase();
+      const filtered=MENU.filter(item=>{
+        const dietMatch=activeDiet==="all" || item.diet===activeDiet || (item.diet==="both" && (activeDiet==="veg"||activeDiet==="nonveg"));
+        return (activeCategory==="All dishes"||item.cat===activeCategory) && dietMatch && (!onlySpecial||item.special) && item.name.toLowerCase().includes(query);
+      });
+      $("#menuCount").textContent=`Showing ${filtered.length} of ${MENU.length} listed dishes`;
+      const grid=$("#menuGrid");
+      if(!filtered.length){grid.innerHTML='<div class="empty-state"><h3>No dishes match those filters.</h3><p>Try another search or clear a filter.</p><button class="btn btn-outline btn-small" id="resetMenuFilters">Reset filters</button></div>';return;}
+      grid.innerHTML=filtered.map(item=>{
+        const firstSize=item.sizes?Object.keys(item.sizes)[0]:"";
+        const key=itemKey(item,firstSize), chosen=shortlist.has(key);
+        const sizeOptions=item.sizes?`<label class="sr-only" for="size-${slug(item.name)}">Choose size or style for ${escapeHtml(item.name)}</label><select class="size-select" id="size-${slug(item.name)}" data-size-for="${escapeHtml(item.name)}">${Object.entries(item.sizes).map(([s,p])=>`<option value="${escapeHtml(s)}">${escapeHtml(s)} · ${money(p)}</option>`).join("")}</select>`:`<span class="item-price">${money(item.price)}</span>`;
+        return `<article class="menu-item" data-item="${escapeHtml(item.name)}"><div class="item-top"><div class="item-name">${escapeHtml(item.name)}</div>${item.sizes?"":`<div class="item-price">${money(item.price)}</div>`}</div><div class="item-tags">${itemDietLabel(item.diet)}${item.special?'<span class="special">Chef special</span>':""}${item.cat==="Pizza"?'<span>Thin crust</span>':""}</div><div class="item-bottom">${sizeOptions}<button class="heart" data-shortlist="${escapeHtml(item.name)}" aria-pressed="${chosen}" aria-label="${chosen?"Remove":"Add"} ${escapeHtml(item.name)} ${chosen?"from":"to"} shortlist">${chosen?"♥ Shortlisted":"♡ Shortlist"}</button></div></article>`;
+      }).join("");
+      $("#menuGrid").querySelectorAll("[data-shortlist]").forEach(btn=>btn.addEventListener("click",()=>toggleShortlist(btn.dataset.shortlist,findSize(btn.dataset.shortlist))));
+      $("#menuGrid").querySelectorAll("[data-size-for]").forEach(sel=>sel.addEventListener("change",()=>{const name=sel.dataset.sizeFor;const item=MENU.find(x=>x.name===name);if(item&&item.sizes){const card=sel.closest(".menu-item");card.querySelector(".item-price")?.remove();const price=money(item.sizes[sel.value]);const priceEl=document.createElement("span");priceEl.className="item-price";priceEl.textContent=price;sel.insertAdjacentElement("afterend",priceEl);const wasShortlisted=[...shortlist.values()].some(v=>v.name===name);if(wasShortlisted){for(const [k,v] of shortlist){if(v.name===name)shortlist.delete(k);}shortlist.set(itemKey(item,sel.value),{...item,size:sel.value,price:item.sizes[sel.value]});renderShortlist();}}}));
+      $("#resetMenuFilters")?.addEventListener("click",resetMenuFilters);
+    }
+    function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+    function findSize(name){const item=MENU.find(x=>x.name===name);if(!item?.sizes)return "";const select=$(`[data-size-for="${CSS.escape(name)}"]`);return select?.value||Object.keys(item.sizes)[0];}
+    function toggleShortlist(name,size=""){
+      const item=MENU.find(x=>x.name===name);if(!item)return;
+      const actualSize=item.sizes?(size||Object.keys(item.sizes)[0]):"";
+      const key=itemKey(item,actualSize);
+      if(shortlist.has(key))shortlist.delete(key);
+      else shortlist.set(key,{...item,size:actualSize,price:item.sizes?item.sizes[actualSize]:item.price});
+      renderMenu();renderShortlist();
+    }
+    function renderShortlist(){
+      $("#shortlistCount").textContent=shortlist.size;
+      const holder=$("#shortlistItems");
+      if(!shortlist.size){holder.innerHTML='<div class="empty-state" style="margin-top:20px"><h3>Your list is empty.</h3><p>Use the heart on any dish to add it here.</p><a class="text-link" href="#menu" id="goMenuFromDrawer">Browse the menu</a></div>';$("#goMenuFromDrawer")?.addEventListener("click",closeDrawer);$("#sendShortlist").disabled=true;$("#sendShortlist").style.opacity=".5";return;}
+      holder.innerHTML=[...shortlist.entries()].map(([key,item])=>`<div class="short-item"><div><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.cat)}${item.size?` · ${escapeHtml(item.size)}`:""} · ${money(item.price)}</small></div><button class="remove-item" data-remove="${escapeHtml(key)}">Remove</button></div>`).join("");
+      $$("[data-remove]",holder).forEach(btn=>btn.addEventListener("click",()=>{shortlist.delete(btn.dataset.remove);renderShortlist();renderMenu();}));
+      $("#sendShortlist").disabled=false;$("#sendShortlist").style.opacity="1";
+    }
+    function openDrawer(){lastFocus=document.activeElement;$("#drawerBackdrop").classList.add("open");$("#shortlistDrawer").classList.add("open");$("#shortlistDrawer").setAttribute("aria-hidden","false");document.body.classList.add("locked");$("#closeDrawer").focus();}
+    function closeDrawer(){ $("#drawerBackdrop").classList.remove("open");$("#shortlistDrawer").classList.remove("open");$("#shortlistDrawer").setAttribute("aria-hidden","true");document.body.classList.remove("locked");lastFocus?.focus?.();}
+    function resetMenuFilters(){activeCategory="All dishes";activeDiet="all";onlySpecial=false;$("#menuSearch").value="";$$("[data-diet]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.diet==="all")));$("#specialFilter").setAttribute("aria-pressed","false");renderCategories();renderMenu();}
+    function updateOpenStatus(){
+      const parts=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Kolkata",weekday:"long",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+      const values=Object.fromEntries(parts.map(p=>[p.type,p.value]));const now=Number(values.hour)*60+Number(values.minute);
+      const open=toMinutes(CONFIG.hours.open),close=toMinutes(CONFIG.hours.close),isOpen=now>=open&&now<close;
+      $("#openStatus").textContent=isOpen?`Open now, until ${CONFIG.hours.displayClose}`:`Opens at ${CONFIG.hours.displayOpen}`;
+      $("#statusDot").style.background=isOpen?"#75B77B":"#D6A05A";
+      $("#statusDot").style.boxShadow=isOpen?"0 0 0 4px rgba(117,183,123,.13)":"0 0 0 4px rgba(214,160,90,.13)";
+    }
+    function toMinutes(t){const [h,m]=t.split(":").map(Number);return h*60+m;}
+    function populateHours(){
+      const day=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Kolkata",weekday:"long"}).format(new Date());
+      $("#hoursTable").innerHTML=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"].map(d=>`<tr class="${d===day?"today":""}" ${d===day?'aria-current="date"':""}><td>${d}${d===day?" · Today":""}</td><td>${CONFIG.hours.displayOpen} – ${CONFIG.hours.displayClose}</td></tr>`).join("");
+    }
+    function openDialog(id){const d=$("#"+id);if(!d)return;lastFocus=document.activeElement;if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");}
+    function closeDialog(id){const d=$("#"+id);if(d?.open)d.close();lastFocus?.focus?.();}
+    function setMinDate(input){const today=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Kolkata",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());input.min=today;}
+    function populateTimes(){
+      const select=$("#resTime");
+      for(let m=11*60+30;m<=22*60+30;m+=30){const h=Math.floor(m/60),min=m%60,ampm=h<12?"am":"pm",h12=h%12||12;const value=`${String(h).padStart(2,"0")}:${String(min).padStart(2,"0")}`;const label=`${h12}:${String(min).padStart(2,"0")} ${ampm}`;select.insertAdjacentHTML("beforeend",`<option value="${value}">${label}</option>`);}
+    }
+    function clearErrors(ids){ids.forEach(id=>$("#"+id).textContent="");}
+    function setError(id,msg){$("#"+id).textContent=msg;}
+    function validPhone(phone){return /^[+]?[\d\s()-]{7,18}$/.test(phone)&&phone.replace(/\D/g,"").length>=10&&phone.replace(/\D/g,"").length<=15;}
+    function dateIsPast(value){if(!value)return true;const today=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Kolkata",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());return value<today;}
+    function setupReservation(){
+      setMinDate($("#resDate"));populateTimes();
+      $("#reservationForm").addEventListener("submit",e=>{
+        e.preventDefault();clearErrors(["errResName","errResPhone","errResDate","errResTime","errResParty"]);
+        const name=$("#resName").value.trim(),phone=$("#resPhone").value.trim(),date=$("#resDate").value,time=$("#resTime").value,party=$("#resParty").value;
+        let ok=true;
+        if(!name){setError("errResName","Please enter your name.");ok=false;}
+        if(!validPhone(phone)){setError("errResPhone","Enter a valid phone number.");ok=false;}
+        if(!date||dateIsPast(date)){setError("errResDate","Choose today or a future date.");ok=false;}
+        if(!time){setError("errResTime","Choose a preferred time.");ok=false;}
+        if(!party){setError("errResParty","Choose a party size.");ok=false;}
+        if(!ok)return;
+        const note=$("#resNote").value.trim();
+        const message=`Table enquiry for ${CONFIG.name}\nName: ${name}\nPhone: ${phone}\nPreferred date: ${date}\nPreferred time: ${time}\nParty size: ${party}${note?`\nNote: ${note}`:""}\n\nThis is an enquiry only, not a confirmed reservation. Please confirm availability directly. No payment is being made.`;
+        makeWhatsApp(message);
+      });
+    }
+    function setupEvents(){
+      $$(".event-enquire").forEach(btn=>btn.addEventListener("click",()=>{ $("#eventType").value=btn.dataset.event;$("#eventDate").value="";$("#eventGuests").value="";$("#eventNote").value="";clearErrors(["errEventType","errEventDate","errEventGuests"]);setMinDate($("#eventDate"));openDialog("eventDialog");$("#eventType").focus();}));
+      $("#eventForm").addEventListener("submit",e=>{
+        e.preventDefault();clearErrors(["errEventType","errEventDate","errEventGuests"]);
+        const type=$("#eventType").value,date=$("#eventDate").value,guests=$("#eventGuests").value,note=$("#eventNote").value.trim();let ok=true;
+        if(!type){setError("errEventType","Choose an event type.");ok=false;}
+        if(!date||dateIsPast(date)){setError("errEventDate","Choose today or a future date.");ok=false;}
+        if(!guests||Number(guests)<1||Number(guests)>1000){setError("errEventGuests","Enter a guest count from 1 to 1000.");ok=false;}
+        if(!ok)return;
+        makeWhatsApp(`Event enquiry for ${CONFIG.name}\nEvent type: ${type}\nPreferred date: ${date}\nExpected guests: ${guests}${note?`\nNote: ${note}`:""}\n\nThis is an enquiry only. Date, availability, arrangements and pricing are not confirmed until the venue responds.`);
+      });
+    }
+    function recommendDishes(diet,mood,heat){
+      const allowed=MENU.filter(x=>x.diet===diet||(x.diet==="both"&&(diet==="veg"||diet==="nonveg")));
+      const scores=item=>{
+        const n=item.name.toLowerCase();let s=0;
+        if(mood==="light"&&(/soup|bruschetta|corn chaat|fries|momos|pomodoro/.test(n)))s+=4;
+        if(mood==="hearty"&&(/biryani|paneer|butter chicken|rara|laal maas|rog(an)? josh|pizza|pasta|dal makhani/.test(n)))s+=4;
+        if(mood==="share"&&(/platter|momos|pizza|garlic bread|chaat|fries|cigar roll|chicken tikka/.test(n)))s+=4;
+        if(heat==="spicy"&&(/peri peri|angara|chilli|kung pao|laal maas|rara|manchow/.test(n)))s+=3;
+        if(heat==="mild"&&(/alfredo|margherita|cream of mushroom|minestrone|pomodoro|gulab jamun|brownie/.test(n)))s+=2;
+        if(item.special)s+=1;
+        return s;
+      };
+      const reasons=item=>{
+        const n=item.name.toLowerCase();
+        if(mood==="light"&&/soup/.test(n))return "A soup option for a lighter start.";
+        if(mood==="share"&&/platter|pizza|momos|garlic bread|fries/.test(n))return "Easy to consider for a table sharing a few dishes.";
+        if(heat==="spicy"&&/peri peri|angara|chilli|kung pao|laal maas|rara/.test(n))return "The name suggests a bolder, spicier flavour profile; confirm spice level with the venue.";
+        if(mood==="hearty"&&/biryani|paneer|butter chicken|rara|dal makhani|pasta|pizza/.test(n))return "A more substantial choice for a filling meal.";
+        return item.special?"Marked as a chef special on the supplied menu.":"A listed menu option that fits your selected preferences.";
+      };
+      return allowed.map(item=>({...item,score:scores(item),reason:reasons(item)})).sort((a,b)=>b.score-a.score||a.name.localeCompare(b.name)).slice(0,3);
+    }
+    function renderSuggestions(){
+      const form=new FormData($("#pickerForm")),items=recommendDishes(form.get("diet"),form.get("mood"),form.get("heat"));
+      const holder=$("#suggestions");holder.hidden=false;
+      holder.innerHTML=items.map(item=>`<article class="suggestion"><div class="item-tags">${itemDietLabel(item.diet)}${item.special?'<span class="special">Chef special</span>':""}</div><h3 style="margin-top:12px">${escapeHtml(item.name)}</h3><div class="item-price">${item.sizes?`${money(Object.values(item.sizes)[0])} onwards`:money(item.price)}</div><p style="margin-top:12px">${escapeHtml(item.reason)}</p><button class="btn btn-outline btn-small" data-suggest="${escapeHtml(item.name)}">♡ Shortlist</button></article>`).join("");
+      $$("[data-suggest]",holder).forEach(btn=>btn.addEventListener("click",()=>toggleShortlist(btn.dataset.suggest,findSize(btn.dataset.suggest))));
+    }
+    function galleryLabel(i){return ["Lounge interior","Food","Entrance","Chopra Residency","Dining room"][i]||"Cafe photo";}
+    function openGallery(index){activeGalleryIndex=(index+5)%5;lastFocus=document.activeElement;renderGalleryLightbox();$("#lightbox").classList.add("open");$("#lightbox").setAttribute("aria-hidden","false");document.body.classList.add("locked");$("#lightboxClose").focus();}
+    function renderGalleryLightbox(){
+      const original=$(`[data-gallery="${activeGalleryIndex}"]`);
+      $("#lightboxContent").innerHTML=original.outerHTML.replace('class="photo-placeholder"','class="photo-placeholder" tabindex="-1"').replace(/data-gallery="\d+"/,'data-gallery="preview"');
+      $("#lightboxCaption").textContent=`${galleryLabel(activeGalleryIndex)} · ${activeGalleryIndex+1} of 5`;
+    }
+    function closeGallery(){ $("#lightbox").classList.remove("open");$("#lightbox").setAttribute("aria-hidden","true");document.body.classList.remove("locked");lastFocus?.focus?.();}
+    function moveGallery(n){activeGalleryIndex=(activeGalleryIndex+n+5)%5;renderGalleryLightbox();}
+    function focusTrap(container,e){
+      if(e.key!=="Tab")return;const els=$('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])',container).filter(el=>el.offsetParent!==null);
+      if(!els.length)return;const first=els[0],last=els[els.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+    function setupNav(){
+      const nav=$("#siteNav"),menu=$("#mobileMenu"),toggle=$("#menuToggle");
+      toggle.addEventListener("click",()=>{menu.classList.add("open");menu.setAttribute("aria-hidden","false");toggle.setAttribute("aria-expanded","true");document.body.classList.add("locked");$("#mobileMenuClose").focus();});
+      function closeMobile(){menu.classList.remove("open");menu.setAttribute("aria-hidden","true");toggle.setAttribute("aria-expanded","false");document.body.classList.remove("locked");toggle.focus();}
+      $("#mobileMenuClose").addEventListener("click",closeMobile);
+      $$("#mobileMenu nav a").forEach(a=>a.addEventListener("click",()=>{menu.classList.remove("open");menu.setAttribute("aria-hidden","true");toggle.setAttribute("aria-expanded","false");document.body.classList.remove("locked");}));
+      const sections=$$("main section[id]");
+      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){$$(".nav-links a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")===`#${entry.target.id}`));}}),{rootMargin:"-30% 0px -60% 0px"});
+      sections.forEach(s=>observer.observe(s));
+      function onScroll(){nav.classList.toggle("compact",window.scrollY>40);const max=document.documentElement.scrollHeight-window.innerHeight;$("#scrollProgress").style.width=`${max>0?window.scrollY/max*100:0}%`;}
+      window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+      $$('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const target=$(a.getAttribute("href"));if(target){e.preventDefault();target.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}}));
+      document.addEventListener("keydown",e=>{if(menu.classList.contains("open")){if(e.key==="Escape")closeMobile();else focusTrap(menu,e);}});
+    }
+    function setupHeroGlow(){
+      const hero=$(".hero");
+      hero.addEventListener("pointermove",e=>{if(e.pointerType==="mouse"){const r=hero.getBoundingClientRect();hero.style.setProperty("--glow-x",`${(e.clientX-r.left)/r.width*100}%`);hero.style.setProperty("--glow-y",`${(e.clientY-r.top)/r.height*100}%`);}});
+    }
+    function setupVisit(){
+      $("#addressText").textContent=CONFIG.address;$("#phoneLink").textContent=CONFIG.phone.replace(/^(\+91)(\d{5})(\d{5})$/,"$1 $2 $3");$("#phoneLink").href=`tel:${CONFIG.phone}`;$("#callNow").href=`tel:${CONFIG.phone}`;$("#floatingCall").href=`tel:${CONFIG.phone}`;
+      $("#instagramLink").href=CONFIG.instagramUrl;$("#instagramButton").href=CONFIG.instagramUrl;$("#deliveryText").textContent=`Delivery note: ${CONFIG.deliveryNote}`;
+      $("#directionsLink").href=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.mapsQuery)}`;
+      $("#copyAddress").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(CONFIG.address);$("#copyStatus").textContent="Address copied.";}catch(e){const area=document.createElement("textarea");area.value=CONFIG.address;area.style.position="fixed";area.style.opacity="0";document.body.appendChild(area);area.select();const ok=document.execCommand("copy");area.remove();$("#copyStatus").textContent=ok?"Address copied.":"Copy was unavailable. Please select the address text manually."; }});
+      $("#backToTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}));
+    }
+    function init(){
+      renderCategories();renderMenu();renderShortlist();updateOpenStatus();populateHours();setupReservation();setupEvents();setupNav();setupHeroGlow();setupVisit();$("#yearNow").textContent=new Date().getFullYear();
+      $$("[data-open-reservation]").forEach(btn=>btn.addEventListener("click",()=>openDialog("reservationDialog")));
+      $$("[data-close-dialog]").forEach(btn=>btn.addEventListener("click",()=>closeDialog(btn.dataset.closeDialog)));
+      ["reservationDialog","eventDialog"].forEach(id=>$("#"+id).addEventListener("click",e=>{if(e.target===$("#"+id))closeDialog(id);}));
+      $("#menuSearch").addEventListener("input",renderMenu);
+      $$("[data-diet]").forEach(btn=>btn.addEventListener("click",()=>{activeDiet=btn.dataset.diet;$$("[data-diet]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));renderMenu();}));
+      $("#specialFilter").addEventListener("click",()=>{onlySpecial=!onlySpecial;$("#specialFilter").setAttribute("aria-pressed",String(onlySpecial));renderMenu();});
+      $("#categoryTabs").addEventListener("click",e=>{const btn=e.target.closest("[data-category]");if(!btn)return;activeCategory=btn.dataset.category;renderCategories();renderMenu();});
+      $("#pickerForm").addEventListener("submit",e=>{e.preventDefault();renderSuggestions();});
+      $("#pickerReset").addEventListener("click",()=>{setTimeout(()=>{$("#suggestions").hidden=true;$("#suggestions").innerHTML="";},0);});
+      $("#sendShortlist").addEventListener("click",()=>{if(!shortlist.size)return;const lines=[...shortlist.values()].map(item=>`• ${item.name}${item.size?` (${item.size})`:""} — ${money(item.price)}`);makeWhatsApp(`Menu enquiry for ${CONFIG.name}\nI'd like to ask about these dishes:\n${lines.join("\n")}\n\nPlease confirm current availability and prices. This is an enquiry only, not an order or payment.`);});
+      $("#closeDrawer").addEventListener("click",closeDrawer);$("#drawerBackdrop").addEventListener("click",closeDrawer);$("#clearShortlist").addEventListener("click",()=>{shortlist.clear();renderShortlist();renderMenu();});
+      $$("[data-gallery]").forEach(btn=>btn.addEventListener("click",()=>openGallery(Number(btn.dataset.gallery))));
+      $("#lightboxClose").addEventListener("click",closeGallery);$("#galleryPrev").addEventListener("click",()=>moveGallery(-1));$("#galleryNext").addEventListener("click",()=>moveGallery(1));
+      $("#lightbox").addEventListener("click",e=>{if(e.target===$("#lightbox"))closeGallery();});
+      $("#lightbox").addEventListener("touchstart",e=>{touchStartX=e.changedTouches[0].screenX;},{passive:true});
+      $("#lightbox").addEventListener("touchend",e=>{if(touchStartX===null)return;const dx=e.changedTouches[0].screenX-touchStartX;if(Math.abs(dx)>45)moveGallery(dx<0?1:-1);touchStartX=null;},{passive:true});
+      document.addEventListener("keydown",e=>{if($("#lightbox").classList.contains("open")){if(e.key==="Escape")closeGallery();if(e.key==="ArrowRight")moveGallery(1);if(e.key==="ArrowLeft")moveGallery(-1);focusTrap($("#lightbox"),e);}if($("#shortlistDrawer").classList.contains("open")){if(e.key==="Escape")closeDrawer();focusTrap($("#shortlistDrawer"),e);}});
+      // Refresh the time-based status periodically without relying on the visitor's local timezone.
+      setInterval(updateOpenStatus,60000);
+    }
+    init();
+  </script>
+</body>
+</html>
